@@ -10,11 +10,11 @@ public class Store {
 
         SpecificAlertObserver observer1 = new EmailAlertObserverImpl("xyz1@gmail.com", iphoneStockObservable);
         SpecificAlertObserver observer2 = new EmailAlertObserverImpl("xyz2@gmail.com", iphoneStockObservable);
-        SpecificAlertObserver observer = new MessageAlertObserverImpl("xyz@gmail.com", iphoneStockObservable);
+        SpecificAlertObserver observer3 = new MessageAlertObserverImpl("xyz@gmail.com", iphoneStockObservable);
 
         iphoneStockObservable.add(observer1);
         iphoneStockObservable.add(observer2);
-        iphoneStockObservable.add(observer2);
+        iphoneStockObservable.add(observer3);
 
         iphoneStockObservable.setStockCount(10);
         iphoneStockObservable.setStockCount(0);
