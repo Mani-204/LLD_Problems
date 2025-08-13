@@ -16,14 +16,9 @@ import java.util.UUID;
 public class ParkingLot {
     private static final ParkingLot INSTANCE = new ParkingLot();
 
-    public void setGeneratedTickets(Map<String, Ticket> generatedTickets) {
-        this.generatedTickets = generatedTickets;
-    }
-
     private PricingStrategy pricingStrategy;
     private final Map<String, ParkingFloor> floors = new HashMap<>();
-
-    private Map<String, Ticket> generatedTickets = new HashMap<>();
+    private final Map<String, Ticket> generatedTickets = new HashMap<>();
 
 
     public void setPricingStrategy(PricingStrategy pricingStrategy){
