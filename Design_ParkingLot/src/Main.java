@@ -24,14 +24,23 @@ class Main{
 
         //create all the parking floors
         ParkingFloor floor1 = new ParkingFloor("Floor1");
+        ParkingFloor floor2 = new ParkingFloor("Floor2");
+
         //add all the spots in the floor1
         floor1.addSpot(new ParkingSpot("F1S1", VehicleType.BIKE));
         floor1.addSpot(new ParkingSpot("F1S2", VehicleType.CAR));
         floor1.addSpot(new ParkingSpot("F1S3", VehicleType.TRUCK));
         floor1.addSpot(new ParkingSpot("F1S4", VehicleType.CAR));
 
+        //add all the spots in the floor2
+        floor2.addSpot(new ParkingSpot("F2S1", VehicleType.BIKE));
+        floor2.addSpot(new ParkingSpot("F2S2", VehicleType.CAR));
+        floor2.addSpot(new ParkingSpot("F2S3", VehicleType.TRUCK));
+        floor2.addSpot(new ParkingSpot("F2S4", VehicleType.CAR));
+
         //add the floor info in the singleton parking lot class
         lot.addFloors(floor1);
+        lot.addFloors(floor2);
 
         System.out.println("-----------------------------------------");
 
@@ -41,12 +50,12 @@ class Main{
 
         LocalDateTime entryTime = LocalDateTime.parse("2025-08-13T10:00:00");
 
-//        Thread thread1 = new Thread(()-> entryGate.parkVehicle(car,entryTime)); // to check concurrency
-//        Thread thread2 = new Thread(()-> entryGate.parkVehicle(car2,entryTime));
+//        Thread thread1 = new Thread(()-> entryGate.parkVehicle(truck,entryTime)); // to check concurrency
+//        Thread thread2 = new Thread(()-> entryGate.parkVehicle(truck2,entryTime));
 //
 //        thread1.start();
 //        thread2.start();
-//
+
 
         Ticket ticket = entryGate.parkVehicle(truck, entryTime);
 
